@@ -27,13 +27,13 @@
 date_default_timezone_set("Asia/Tokyo");
 
 // データベース接続情報
-$servername = "localhost"; 
+$servername = "mysql"; 
 $username = "root"; 
-$password = ""; 
+$password = "password"; 
 $dbname = "sample1"; 
 
 try {
-    $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo = new PDO("mysql:host=$servername:3307;dbname=$dbname;charset=utf8mb4", $username, $password);
     // PDOエラーモードを例外に設定
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
